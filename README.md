@@ -69,5 +69,6 @@ npm start
 
 # 2. 🖼 Design
 
-// Add images of the design here
+We started by making a design of the whole app, to be able to see how we wanted it to look like, as well as being able to plan the different features and React components.
+
 ![Design](https://github.com/Gynko/friidrett/blob/main/Github%20Images/Screenshot%202023-10-23%20at%2018.29.09.png)
