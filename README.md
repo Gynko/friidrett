@@ -68,3 +68,6 @@ npm start
 ```
 
 # 2. 🖼 Design
+
+// Add images of the design here
+![Design](https://github.com/Gynko/friidrett/blob/main/Github%20Images/Screenshot%202023-10-23%20at%2018.29.09.png)
