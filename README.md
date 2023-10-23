@@ -8,12 +8,12 @@ Team members:
 - Yardenna: https://github.com/yardokun
 - Yoann: https://github.com/Gynko
 
-# Table of content <!-- omit in toc -->
+# 📒 Table of content <!-- omit in toc -->
 
-- [1. Installation](#1-installation)
-- [2. Design](#2-design)
+- [1. 🪜 Installation](#1--installation)
+- [2. 🖼 Design](#2--design)
 
-# 1. Installation
+# 1. 🪜 Installation
 
 1. Clone this repo
 
@@ -67,4 +67,4 @@ npm install
 npm start
 ```
 
-# 2. Design
+# 2. 🖼 Design
