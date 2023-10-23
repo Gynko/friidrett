@@ -4,14 +4,15 @@ A student project for the course Frontend Development at Gokstad Akademiet. The 
 
 Team members:
 
-- Sandra: https://github.com/shuseklepp
-- Yardenna: https://github.com/yardokun
-- Yoann: https://github.com/Gynko
+- Sandra: https://github.com/shuseklepp 💁🏼‍♀️
+- Yardenna: https://github.com/yardokun 👩🏻‍💼
+- Yoann: https://github.com/Gynko 🧔🏻‍♂️
 
 # 📒 Table of content <!-- omit in toc -->
 
 - [1. 🪜 Installation](#1--installation)
 - [2. 🖼 Design](#2--design)
+- [3. App architecture](#3-app-architecture)
 
 # 1. 🪜 Installation
 
@@ -71,4 +72,8 @@ npm start
 
 We started by making a design of the whole app, to be able to see how we wanted it to look like, as well as being able to plan the different features and React components.
 
+We used Midjourney and DALL-E to create the graphical assets.
+
 ![Design](https://github.com/Gynko/friidrett/blob/main/Github%20Images/Screenshot%202023-10-23%20at%2018.29.09.png)
+
+# 3. App architecture
