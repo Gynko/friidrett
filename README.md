@@ -12,7 +12,7 @@ Team members:
 
 - [1. 🪜 Installation](#1--installation)
 - [2. 🖼 Design](#2--design)
-- [3. App architecture](#3-app-architecture)
+- [3. 🏛 App architecture](#3--app-architecture)
 
 # 1. 🪜 Installation
 
@@ -76,4 +76,4 @@ We used Midjourney and DALL-E to create the graphical assets.
 
 ![Design](https://github.com/Gynko/friidrett/blob/main/Github%20Images/Screenshot%202023-10-23%20at%2018.29.09.png)
 
-# 3. App architecture
+# 3. 🏛 App architecture
