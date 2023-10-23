@@ -3,9 +3,10 @@
 A student project for the course Frontend Development at Gokstad Akademiet. The project is a web application for a fictitious athletics club. The application is built with React and Node.js, and uses a MySQL database.
 
 Team members:
-Yardenna: https://github.com/yardokun
-Sandra: https://github.com/shuseklepp
-Yoann: https://github.com/Gynko
+
+- Yardenna: https://github.com/yardokun
+- Sandra: https://github.com/shuseklepp
+- Yoann: https://github.com/Gynko
 
 # Table of content <!-- omit in toc -->
 
