@@ -74,7 +74,7 @@ We started by making a design of the whole app in Figma, to be able to see how w
 
 https://www.figma.com/file/VNoAB3Z4FPMkI3Q3ocIkKD/Untitled?type=design&node-id=0-1&mode=design&t=1g9OlKXLNOVihzdS-0
 
-We used Midjourney and DALL-E to create the graphical assets.
+We used Midjourney and DALL-E to create the graphical assets: the logo and the icons.
 
 ![Design](https://github.com/Gynko/friidrett/blob/main/Github%20Images/Screenshot%202023-10-23%20at%2018.29.09.png)
 
