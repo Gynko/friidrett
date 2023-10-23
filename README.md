@@ -1,4 +1,4 @@
-# Project Friidrett <!-- omit in toc -->
+# 🤸‍♂️⛹️‍♀️🤺 Project Friidrett 🥇🥈🥉<!-- omit in toc -->
 
 A student project for the course Frontend Development at Gokstad Akademiet. The project is a web application for a fictitious athletics club. The application is built with React and Node.js, and uses a MySQL database.
 
