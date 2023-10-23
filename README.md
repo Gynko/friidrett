@@ -47,4 +47,16 @@ And then start it
 docker-compose up -d7.
 ```
 
+12. Installing the client - Navigate to client folder and
+
+```bash
+npm install
+```
+
+13. Start the client
+
+```bash
+npm start
+```
+
 # 2. Design
