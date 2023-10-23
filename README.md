@@ -70,7 +70,9 @@ npm start
 
 # 2. 🖼 Design
 
-We started by making a design of the whole app, to be able to see how we wanted it to look like, as well as being able to plan the different features and React components.
+We started by making a design of the whole app in Figma, to be able to see how we wanted it to look like, as well as being able to plan the different features and React components.
+
+https://www.figma.com/file/VNoAB3Z4FPMkI3Q3ocIkKD/Untitled?type=design&node-id=0-1&mode=design&t=1g9OlKXLNOVihzdS-0
 
 We used Midjourney and DALL-E to create the graphical assets.
 
