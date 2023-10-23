@@ -4,8 +4,8 @@ A student project for the course Frontend Development at Gokstad Akademiet. The 
 
 Team members:
 
-- Yardenna: https://github.com/yardokun
 - Sandra: https://github.com/shuseklepp
+- Yardenna: https://github.com/yardokun
 - Yoann: https://github.com/Gynko
 
 # Table of content <!-- omit in toc -->
