@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "JetBrainsMono-ExtraBold";
+  src: url("../assets/fonts/JetBrainsMono-ExtraBold.ttf") format("truetype");
+}
+
+:root {
+  /* Colors */
+  --color-primary: #08274a;
+  --color-secondary: #fec700;
+  --color-tertiary: #000000;
+  --color-quaternary: #d9d9d9;
+  --color-quinary: #f1b1b1;
+
+  /* Fonts */
+  --font-heading-h1: "JetBrainsMono-ExtraBold", sans-serif;
+}
