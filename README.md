@@ -102,7 +102,12 @@ This follows the logic of the `Atomic Design methodology`, where we have:
 2. the `molecules` (things made of atoms - like a header, which would contain links)
 3. the `pages` (things made of molecules - every page having a header, itself made of links).
 
-For the sake of simplicity, we will only differentiate between `pages` and `components` in our app. This is materialised in the folder structure of the app: we have a folder for `pages` and a folder for `components`.
+For the sake of simplicity, we will only differentiate between `pages` and `components` in our app.
+
+This is materialised like such:
+
+1. In the folder structure of the app: we have a folder for `pages` and a folder for `components`.
+2. the pages files are named for example `Homepage.page.jsx` and the components files are named for example `Header.component.jsx`.
 
 ## 3.3. The App component
 
