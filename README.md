@@ -123,7 +123,7 @@ TODO
 
 ## 3.5. Global CSS
 
-The remedy.css file resets the base css like margins and paddings.
+The remedy.css file resets the base css like margins and paddings, and ugly list-style-type, and also sets the `box-sizing` to `border-box` for all the elements of the app.
 
 The globalVariables.css file contains the global `CSS variables` of the app that will be used by all the components of the app, like the colors, the fonts, and the main sizing values like `--header-mobile-height`.
 
