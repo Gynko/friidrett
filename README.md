@@ -57,7 +57,7 @@ git clone https://github.com/yngvemag/ga-friidrett
 And then start it
 
 ```bash
-docker-compose up -d7.
+docker-compose up -d
 ```
 
 12. Installing the client - Navigate to client folder and
