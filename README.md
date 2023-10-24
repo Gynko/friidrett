@@ -13,6 +13,10 @@ Team members:
 - [1. 🪜 Installation](#1--installation)
 - [2. 🖼 Design](#2--design)
 - [3. 🏛 App architecture](#3--app-architecture)
+  - [3.1. Top level Components](#31-top-level-components)
+    - [3.1.1. The App component](#311-the-app-component)
+  - [3.2. Global CSS](#32-global-css)
+  - [3.3. The routing](#33-the-routing)
 
 # 1. 🪜 Installation
 
@@ -79,3 +83,65 @@ We used Midjourney and DALL-E to create the graphical assets: the logo and the i
 ![Design](https://github.com/Gynko/friidrett/blob/main/Github%20Images/Screenshot%202023-10-23%20at%2018.29.09.png)
 
 # 3. 🏛 App architecture
+
+## 3.1. Top level Components
+
+1. At the top level we have index.js, which renders the App component. It is the entry point of the app.
+2. The App component renders the Router component, which renders the different pages of the app, which are all using various components. This reflects the folder structure of the app: we have a folder for pages and a folder for components.
+
+### 3.1.1. The App component
+
+We decided on having the App component to be responsible for:
+
+1. Injecting the 2 global css stylesheets of the app: the remedy.css and the globalVariables.css.
+2. rendering the routing to be handled separately.
+
+## 3.2. Global CSS
+
+The remedy.css file resets the base css like margins and paddings.
+
+The globalVariables.css file contains the global variables of the app that will be used by all the components of the app, like the colors, the fonts, and the main sizing values like --header-mobile-height.
+
+Example:
+
+```css
+:root {
+  --color-primary: #ffc107;
+  --color-secondary: #ff9800;
+  --color-tertiary: #ff5722;
+
+  --font-h1: "Roboto", sans-serif;
+  --font-links: "Roboto Slab", serif;
+
+  --header-mobile-height: 3rem;
+  --header-desktop-height: 4rem;
+}
+```
+
+This way, if we want to change the color of the primary button, we only have to change it in one place, and it will be reflected everywhere in the app.
+
+Additionaly, a value like the header-height is for example used in the header component to define its height , but also by the component that renders the pages, to define the top margin of the page, so that the page content is not hidden by the header.
+
+In the header component we would have:
+
+```css
+.header {
+  height: var(--header-mobile-height);
+}
+```
+
+In the page content component we would have for example:
+
+```css
+.section {
+  margin-top: var(--header-mobile-height);
+}
+```
+
+## 3.3. The routing
+
+Will be implemented with React router dom.
+
+```
+
+```
