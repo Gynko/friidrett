@@ -14,9 +14,10 @@ Team members:
 - [2. 🖼 Design](#2--design)
 - [3. 🏛 App architecture](#3--app-architecture)
   - [3.1. Top level Components](#31-top-level-components)
-    - [3.1.1. The App component](#311-the-app-component)
-    - [3.1.2. The Routing component](#312-the-routing-component)
-  - [3.2. Global CSS](#32-global-css)
+  - [3.2. Atomic design](#32-atomic-design)
+  - [3.3. The App component](#33-the-app-component)
+  - [3.4. The Routing component](#34-the-routing-component)
+  - [3.5. Global CSS](#35-global-css)
 
 # 1. 🪜 Installation
 
@@ -87,36 +88,39 @@ We used Midjourney and DALL-E to create the graphical assets: the logo and the i
 ## 3.1. Top level Components
 
 1. At the top level we have `index.js`, the entry point of the app. Its purpose would be for example to handle the tooling of the app such as the state management with `redux`. But for our case, it only renders the `App` component.
-2. The `App` component renders the `Routing` component, which renders the different `page components` of the app, which are all using various `components`.
+2. The `App` component renders the `Routing` component, which renders the different `page components` of the app, which are all using various `components`. More on the app component in the 3.3 section.
+
+## 3.2. Atomic design
 
 So for example the `Home` page component will be using the `Header` component, the `Footer` component, the `Hero` component, etc.
 
 This follows the logic of the `Atomic Design methodology`, where we have:
 
 1. the `atoms` (the smallest components, like a link)
-2. the `molecules` (components made of atoms - like a header, which would contain links)
-3. the `pages` (components made of organisms - every page having a header, itself made of links, for example).
+2. the `molecules` (things made of atoms - like a header, which would contain links)
+3. the `pages` (things made of molecules - every page having a header, itself made of links).
 
-For the sake of simplicity, we will only differentiate between `pages` and `components` in our app.
+For the sake of simplicity, we will only differentiate between `pages` and `components` in our app. This is materialised in the folder structure of the app: we have a folder for `pages` and a folder for `components`.
 
-This is materialised in the folder structure of the app: we have a folder for `pages` and a folder for `components`.
-
-### 3.1.1. The App component
+## 3.3. The App component
 
 We decided on having the App component to be responsible for:
 
 1. Injecting the 2 global css stylesheets of the app: the `remedy.css` and the `globalVariables.css`.
 2. rendering the routing component.
+3. handling the pieces of state that are reused everywhere, like the `currentUser` state, which would be used to know if the user is logged in or not, which would be used by the `Header` component to know if it should display the `login` or the `logout` button, and also by the `Routing` component to know if it should display the `Admin` page or not.
 
-### 3.1.2. The Routing component
+## 3.4. The Routing component
 
 TODO
 
-## 3.2. Global CSS
+## 3.5. Global CSS
 
 The remedy.css file resets the base css like margins and paddings.
 
-The globalVariables.css file contains the global variables of the app that will be used by all the components of the app, like the colors, the fonts, and the main sizing values like --header-mobile-height.
+The globalVariables.css file contains the global `CSS variables` of the app that will be used by all the components of the app, like the colors, the fonts, and the main sizing values like --header-mobile-height.
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 
 Example:
 
@@ -134,7 +138,7 @@ Example:
 }
 ```
 
-It can then be used in our components like this:
+We can use be used in our components like this:
 
 ```css
 .my-button {
