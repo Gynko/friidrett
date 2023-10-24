@@ -126,7 +126,7 @@ TODO
 
 We have 2 files that are injected in the `App.jsx` file:
 
-1. The `remedy.css` file resets the base css like margins and paddings, and ugly list-style-type, and also sets the `box-sizing` to `border-box` for all the elements of the app.
+1. The `remedy.css` file resets the built in browser css like margins and paddings, the ugly list-style-type, and also sets the `box-sizing` to `border-box` for all the elements of the app.
 
 2. The `globalVariables.css` file contains the global `CSS variables` of the app that will be used by all the components of the app, like the colors, the fonts, and the main sizing values like `--header-mobile-height`.
 
