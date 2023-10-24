@@ -15,6 +15,7 @@ Team members:
 - [3. 🏛 App architecture](#3--app-architecture)
   - [3.1. Top level Components](#31-top-level-components)
     - [3.1.1. The App component](#311-the-app-component)
+    - [3.1.2. The Routing component](#312-the-routing-component)
   - [3.2. Global CSS](#32-global-css)
   - [3.3. The routing](#33-the-routing)
 
@@ -87,7 +88,7 @@ We used Midjourney and DALL-E to create the graphical assets: the logo and the i
 ## 3.1. Top level Components
 
 1. At the top level we have `index.js`, the entry point of the app. It renders the `App` component.
-2. The `App` component renders the `Router` component, which renders the different `page components` of the app, which are all using various `components`.
+2. The `App` component renders the `Routing` component, which renders the different `page components` of the app, which are all using various `components`.
 
 So for example the `Home` page component will be using the `Header` component, the `Footer` component, the `Hero` component, etc.
 
@@ -98,7 +99,11 @@ This is materialised in the folder structure of the app: we have a folder for `p
 We decided on having the App component to be responsible for:
 
 1. Injecting the 2 global css stylesheets of the app: the `remedy.css` and the `globalVariables.css`.
-2. rendering the routing to be handled separately.
+2. rendering the routing component.
+
+### 3.1.2. The Routing component
+
+TODO
 
 ## 3.2. Global CSS
 
