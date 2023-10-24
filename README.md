@@ -86,10 +86,18 @@ We used Midjourney and DALL-E to create the graphical assets: the logo and the i
 
 ## 3.1. Top level Components
 
-1. At the top level we have `index.js`, the entry point of the app. It renders the `App` component.
+1. At the top level we have `index.js`, the entry point of the app. Its purpose would be for example to handle the tooling of the app such as the state management with `redux`. But for our case, it only renders the `App` component.
 2. The `App` component renders the `Routing` component, which renders the different `page components` of the app, which are all using various `components`.
 
 So for example the `Home` page component will be using the `Header` component, the `Footer` component, the `Hero` component, etc.
+
+This follows the logic of the `Atomic Design methodology`, where we have:
+
+1. the `atoms` (the smallest components, like a link)
+2. the `molecules` (components made of atoms - like a header, which would contain links)
+3. the `pages` (components made of organisms - every page having a header, itself made of links, for example).
+
+For the sake of simplicity, we will only differentiate between `pages` and `components` in our app.
 
 This is materialised in the folder structure of the app: we have a folder for `pages` and a folder for `components`.
 
