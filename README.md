@@ -107,7 +107,7 @@ For the sake of simplicity, we will only differentiate between `pages` and `comp
 This is materialised like such:
 
 1. In the folder structure of the app: we have a folder for `pages` and a folder for `components`.
-2. the pages files are named for example `Homepage.page.jsx` and the components files are named for example `Header.component.jsx`.
+2. the page components are named for example `Homepage.page.jsx` and the "components components" are named for example `Header.component.jsx`.
 
 ## 3.3. The App component
 
