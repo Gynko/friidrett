@@ -118,7 +118,7 @@ TODO
 
 The remedy.css file resets the base css like margins and paddings.
 
-The globalVariables.css file contains the global `CSS variables` of the app that will be used by all the components of the app, like the colors, the fonts, and the main sizing values like --header-mobile-height.
+The globalVariables.css file contains the global `CSS variables` of the app that will be used by all the components of the app, like the colors, the fonts, and the main sizing values like `--header-mobile-height`.
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 
@@ -138,7 +138,7 @@ Example:
 }
 ```
 
-We can use be used in our components like this:
+Having this, we can then use them in our components like this:
 
 ```css
 .my-button {
@@ -146,7 +146,7 @@ We can use be used in our components like this:
 }
 ```
 
-This way, if we want to change the color of the primary button, we only have to change it in one place, and it will be reflected everywhere in the app.
+This way, if we want to change the color of the primary button or the primary font, we only have to change it in one place, and it will be reflected everywhere in the app. This makes our app `maintainable` and `scalable`.
 
 Additionaly, a value like the `header-height` is for example used in the header component to define its `height` , but also by the component that renders the pages, to define the `margin-top` of the page, so that the page content is not hidden by the header.
 
