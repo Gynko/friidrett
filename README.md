@@ -27,11 +27,9 @@ Team members:
 ```bash
 git clone https://github.com/Gynko/friidrett.git
 ```
-
 2. Download Docker and install: https://www.docker.com/get-started
-3. Download docker file: https://gokstadakademietas.sharepoint.com/:u:/r/sites/1.Frontend-utviklingH22-V24/Delte%20dokumenter/JavaScript%20rammeverk%20-%20React/Arbeidskrav%202%20filer/Dockerfile?csf=1&web=1&e=1lEgZe
-4. Download the sql file: https://gokstadakademietas.sharepoint.com/:u:/r/sites/1.Frontend-utviklingH22-V24/Delte%20dokumenter/JavaScript%20rammeverk%20-%20React/Arbeidskrav%202%20filer/gokstad-all.sql?csf=1&web=1&e=ak9BHN
-5. Build Docker file:
+3. Download the sql file: https://gokstadakademietas.sharepoint.com/:u:/r/sites/1.Frontend-utviklingH22-V24/Delte%20dokumenter/JavaScript%20rammeverk%20-%20React/Arbeidskrav%202%20filer/gokstad-all.sql?csf=1&web=1&e=ak9BHN
+4. Build Docker file:
 
 ```bash
 docker build -t ga-db-image .
