@@ -17,7 +17,6 @@ Team members:
     - [3.1.1. The App component](#311-the-app-component)
     - [3.1.2. The Routing component](#312-the-routing-component)
   - [3.2. Global CSS](#32-global-css)
-  - [3.3. The routing](#33-the-routing)
 
 # 1. 🪜 Installation
 
@@ -153,12 +152,4 @@ In the page content component we would have for example:
 .section {
   margin-top: var(--header-mobile-height);
 }
-```
-
-## 3.3. The routing
-
-Will be implemented with React router dom.
-
-```
-
 ```
