@@ -128,7 +128,7 @@ It can then be used in our components like this:
 
 This way, if we want to change the color of the primary button, we only have to change it in one place, and it will be reflected everywhere in the app.
 
-Additionaly, a value like the header-height is for example used in the header component to define its height , but also by the component that renders the pages, to define the top margin of the page, so that the page content is not hidden by the header.
+Additionaly, a value like the `header-height` is for example used in the header component to define its height , but also by the component that renders the pages, to define the top margin of the page, so that the page content is not hidden by the header.
 
 In the header component we would have:
 
