@@ -107,7 +107,7 @@ For the sake of simplicity, we will only differentiate between `pages` and `comp
 This is materialised like such:
 
 1. In the folder structure of the app: we have a folder for `pages` and a folder for `components`.
-2. the page components are named for example `Homepage.page.jsx` and the "components components" are named for example `Header.component.jsx`.
+2. the page components are named for example `Homepage.page.jsx` and the "components components" are named for example `Header.component.jsx`. This has an added benefit when we want to find a component via VSCODE with SHIFT COMMAND P, we can just type `component` or `page` and we will find all the components or all the pages.
 
 ## 3.3. The App component
 
