@@ -90,6 +90,8 @@ We used Midjourney and DALL-E to create the graphical assets: the logo and the i
 1. At the top level we have `index.js`, the entry point of the app. Its purpose would be for example to handle the tooling of the app such as the state management with `redux`. But for our case, it only renders the `App` component.
 2. The `App` component renders the `Routing` component, which renders the different `page components` of the app, which are all using various `components`. More on the app component in the 3.3 section.
 
+![app-architecture](https://github.com/Gynko/friidrett/blob/main/Github%20Images/architecture.png?raw=true)
+
 ## 3.2. Atomic design
 
 So for example the `Home` page component will be using the `Header` component, the `Footer` component, the `Hero` component, etc.
