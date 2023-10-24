@@ -86,14 +86,14 @@ We used Midjourney and DALL-E to create the graphical assets: the logo and the i
 
 ## 3.1. Top level Components
 
-1. At the top level we have index.js, which renders the App component. It is the entry point of the app.
-2. The App component renders the Router component, which renders the different pages of the app, which are all using various components. This reflects the folder structure of the app: we have a folder for pages and a folder for components.
+1. At the top level we have `index.js`, which renders the `App` component. It is the entry point of the app.
+2. The `App` component renders the `Router` component, which renders the different pages of the app, which are all using various sub-components. This reflects the folder structure of the app: we have a folder for `pages` and a folder for `components`.
 
 ### 3.1.1. The App component
 
 We decided on having the App component to be responsible for:
 
-1. Injecting the 2 global css stylesheets of the app: the remedy.css and the globalVariables.css.
+1. Injecting the 2 global css stylesheets of the app: the `remedy.css` and the `globalVariables.css`.
 2. rendering the routing to be handled separately.
 
 ## 3.2. Global CSS
@@ -128,7 +128,7 @@ It can then be used in our components like this:
 
 This way, if we want to change the color of the primary button, we only have to change it in one place, and it will be reflected everywhere in the app.
 
-Additionaly, a value like the `header-height` is for example used in the header component to define its height , but also by the component that renders the pages, to define the top margin of the page, so that the page content is not hidden by the header.
+Additionaly, a value like the `header-height` is for example used in the header component to define its `height` , but also by the component that renders the pages, to define the `margin-top` of the page, so that the page content is not hidden by the header.
 
 In the header component we would have:
 
