@@ -123,7 +123,7 @@ TODO
 
 ## 3.5. Global CSS
 
-We have 2 files:
+We have 2 files that are injected in the `App.jsx` file:
 
 1. The `remedy.css` file resets the base css like margins and paddings, and ugly list-style-type, and also sets the `box-sizing` to `border-box` for all the elements of the app.
 
