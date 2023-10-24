@@ -18,7 +18,7 @@ Team members:
   - [3.3. The App component](#33-the-app-component)
   - [3.4. The Routing component](#34-the-routing-component)
   - [3.5. Global CSS](#35-global-css)
-    - [CSS rem units](#css-rem-units)
+    - [3.5.1. CSS rem units](#351-css-rem-units)
 
 # 1. 🪜 Installation
 
@@ -176,7 +176,7 @@ In the page content component we would have for example:
 }
 ```
 
-### CSS rem units
+### 3.5.1. CSS rem units
 
 We use `rem` for 99% of all sizing values, because it is a relative unit to the `font-size` of the `root` element, which is the `html` element, and usually is 16px in all browsers.
 
