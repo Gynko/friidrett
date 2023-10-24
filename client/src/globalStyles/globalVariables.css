@@ -1,6 +1,6 @@
 @font-face {
   font-family: "JetBrainsMono-ExtraBold";
-  src: url("../assets/fonts/JetBrainsMono-ExtraBold.ttf") format("truetype");
+  src: url("../assets/fonts/JetBrainsMono-ExtraBold.woff2") format("woff2");
 }
 
 :root {
