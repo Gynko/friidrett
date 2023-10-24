@@ -86,8 +86,12 @@ We used Midjourney and DALL-E to create the graphical assets: the logo and the i
 
 ## 3.1. Top level Components
 
-1. At the top level we have `index.js`, which renders the `App` component. It is the entry point of the app.
-2. The `App` component renders the `Router` component, which renders the different pages of the app, which are all using various sub-components. This reflects the folder structure of the app: we have a folder for `pages` and a folder for `components`.
+1. At the top level we have `index.js`, the entry point of the app. It renders the `App` component.
+2. The `App` component renders the `Router` component, which renders the different `page components` of the app, which are all using various `components`.
+
+So for example the `Home` page component will be using the `Header` component, the `Footer` component, the `Hero` component, etc.
+
+This is materialised in the folder structure of the app: we have a folder for `pages` and a folder for `components`.
 
 ### 3.1.1. The App component
 
