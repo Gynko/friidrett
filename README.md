@@ -46,7 +46,7 @@ docker run --name ga-mysql-8.0.33 -p 3306:3306 -v ga-vol:/var/lib/mysql -d ga-db
    Connection name: GokstadDb
    Port: 3306
    Password: gokstad
-9. Open the sql script that we downloaded
+9. Open the sql script that we downloaded - File Open SQL Script - Encoding latin1
 10. Run the script - the lightning icon
 11. Installing the server and the database:
 
