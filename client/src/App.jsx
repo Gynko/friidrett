@@ -1,8 +1,9 @@
 import "./globalStyles/remedy.css";
 import "./globalStyles/globalVariables.css";
+import Routing from "./routing.component";
 
 function App() {
-  return <div>hello world</div>;
+  return <Routing />;
 }
 
 export default App;
