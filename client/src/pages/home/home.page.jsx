@@ -1,3 +1,14 @@
+//import { useContext } from "react";
+//import { UserContext } from "../../App";
+import "./home.styles.css";
+
 export default function Home() {
-  return <p>home page component</p>;
+  //const { user, setUser } = useContext(UserContext);
+  return (
+    <div className="page-container">
+      <main>
+        <h1>Home page</h1>
+      </main>
+    </div>
+  );
 }

@@ -24,7 +24,7 @@ export default function Routing() {
           element: <Home />,
         },
         {
-          path: "/race",
+          path: "/races",
           element: <Race />,
         },
         {
