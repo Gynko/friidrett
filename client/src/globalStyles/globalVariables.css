@@ -2,15 +2,25 @@
   font-family: "JetBrainsMono-ExtraBold";
   src: url("../assets/fonts/JetBrainsMono-ExtraBold.woff2") format("woff2");
 }
+@font-face {
+  font-family: "JockeyOne-Regular";
+  src: url("../assets/fonts/JockeyOne-Regular.woff2") format("woff2");
+}
 
 :root {
   /* Colors */
   --color-primary: #08274a;
   --color-secondary: #fec700;
   --color-tertiary: #000000;
-  --color-quaternary: #d9d9d9;
+  --color-quaternary: #f0f5f5;
   --color-quinary: #f1b1b1;
+  --color-dropdown: #f0e5d8;
 
   /* Fonts */
-  --font-heading-h1: "JetBrainsMono-ExtraBold", sans-serif;
+  --font-primary: "JetBrainsMono-ExtraBold", sans-serif;
+  --font-secondary: "JockeyOne-Regular", sans-serif;
+
+  /* Sizes */
+  --header-mobile-height: 5rem;
+  --header-tablet-height: 6rem;
 }

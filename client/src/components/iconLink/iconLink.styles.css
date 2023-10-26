@@ -1,0 +1,8 @@
+.icons-container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-primary);
+  font-family: var(--font-primary);
+}

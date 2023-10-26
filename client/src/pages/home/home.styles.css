@@ -1,0 +1,7 @@
+@media (max-width: 500px) {
+  .page-container {
+    background-color: var(--color-quaternary);
+    min-height: calc(100vh - var(--header-mobile-height));
+    margin-bottom: var(--header-mobile-height);
+  }
+}
