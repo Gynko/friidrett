@@ -1,3 +1,6 @@
+import SectionTitle from "../../components/sectionTitle/sectionTitle.component";
+import membersIcon from "../../assets/graphics/members.png";
+
 export default function MembersManagement() {
-  return <p>This is a member page</p>;
+  return <SectionTitle membersIcon={membersIcon} />;
 }
