@@ -1,6 +1,16 @@
 import SectionTitle from "../../components/sectionTitle/sectionTitle.component";
-import membersIcon from "../../assets/graphics/members.png";
+import PageContainer from "../../components/pageContainer/pageContainer.component";
 
 export default function MembersManagement() {
-  return <SectionTitle membersIcon={membersIcon} />;
+  return (
+    <main>
+      <PageContainer>
+        <SectionTitle
+          icon="members"
+          titleTop="Members"
+          titleBottom="management"
+        />
+      </PageContainer>
+    </main>
+  );
 }
