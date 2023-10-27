@@ -1,15 +1,11 @@
 import React from 'react';
-import "./button.styles.css"
- function Button({ label, color, onClick }) {
-    const buttonStyle = {
-        backgroundColor: color
-    };
-  return (
-      <button style={buttonStyle} className="main-button" onClick={onClick}>
-          {label}
-      </button>
-  );
+import "./button.styles.css";
+
+export default function Button({ text, color, onClick, width }) {
+
+    return (
+        <button className= {`button-${color} ${width}`} onClick={onClick}>
+            {`${text}`}
+        </button>
+    );
 }
-
-
-export default Button;
