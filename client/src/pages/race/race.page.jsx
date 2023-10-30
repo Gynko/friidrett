@@ -6,7 +6,7 @@ import SectionTitle from "../../components/sectionTitle/sectionTitle.component";
 import PageContainer from "../../components/pageContainer/pageContainer.component";
 import InputText from "../../components/button/inputText.component";
 
-function RaceManagement() {
+export default function RaceManagement() {
   const raceButtons = [
     { text: "New race", width: "button-small", path: "/new-race" },
     { text: "Edit race", width: "button-small", path: "/edit-race" },
