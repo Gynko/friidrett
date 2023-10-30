@@ -13,6 +13,7 @@ import RaceFind from "./pages/race/raceFind/raceFind.page";
 import RaceFullList from "./pages/race/raceFullList/raceFullList.page";
 import RaceNew from "./pages/race/raceNew/raceNew.page";
 import RaceManagement from "./pages/race/race.page";
+import ResultsManagement from "./pages/results/results.page";
 
 export default function Routing() {
   function BasicLayout() {
@@ -80,6 +81,10 @@ export default function Routing() {
         {
           path: "/races/new",
           element: <RaceNew />,
+        },
+        {
+          path: "/results",
+          element: <ResultsManagement />,
         },
       ],
     },

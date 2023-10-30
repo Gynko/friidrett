@@ -15,14 +15,6 @@ export default function RaceNew() {
   return (
     <PageContainer>
       <SectionTitle icon="races" titleTop="Races" titleBottom="management" />
-
-      <Link key={index} to={button.path}>
-        <Button text={button.text} color="red" width={button.width} />
-      </Link>
-
-      <Link key={index} to={button.path}>
-        <Button text={button.text} color="yellow" width={button.width} />
-      </Link>
     </PageContainer>
   );
 }
