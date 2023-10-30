@@ -5,7 +5,7 @@ import "./race.page.css";
 import SectionTitle from "../../components/sectionTitle/sectionTitle.component";
 import PageContainer from "../../components/pageContainer/pageContainer.component";
 
-function RaceManagement() {
+export default function RaceManagement() {
   const raceButtons = [
     { text: "New race", width: "button-small", path: "/new-race" },
     { text: "Edit race", width: "button-small", path: "/edit-race" },
@@ -26,5 +26,3 @@ function RaceManagement() {
     </PageContainer>
   );
 }
-
-export default RaceManagement;
