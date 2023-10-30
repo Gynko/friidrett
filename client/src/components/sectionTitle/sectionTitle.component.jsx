@@ -12,7 +12,7 @@ export default function SectionTitle({ icon, titleTop, titleBottom }) {
 
   return (
     <div className="section-title-container">
-      <img src={imageChanger()} height="70px" width="64px"></img>
+      <img alt={`${icon} icon`} src={imageChanger()} width="64px"></img>
       <div className="section-title-wrapper">
         <h1 className="section-title-text">
           {titleTop} {"\n"} {titleBottom}
