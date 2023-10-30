@@ -9,10 +9,6 @@ export default function RaceEdit() {
   return (
     <PageContainer>
       <SectionTitle icon="races" titleTop="Races" titleBottom="management" />
-
-      <Link key={index} to={button.path}>
-        <Button text={button.text} color="black" width={button.width} />
-      </Link>
     </PageContainer>
   );
 }
