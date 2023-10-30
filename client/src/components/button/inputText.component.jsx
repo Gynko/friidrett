@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 
 export default function InputText({ type = 'text', placeholder, value, onChange, name }) {
     return (
@@ -11,4 +11,4 @@ export default function InputText({ type = 'text', placeholder, value, onChange,
             className="custom-input"
         />
     );
-}
+} */
