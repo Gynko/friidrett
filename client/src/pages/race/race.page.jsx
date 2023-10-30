@@ -4,6 +4,7 @@ import Button from "../../components/button/button.component";
 import "./race.page.css";
 import SectionTitle from "../../components/sectionTitle/sectionTitle.component";
 import PageContainer from "../../components/pageContainer/pageContainer.component";
+import InputText from "../../components/button/inputText.component";
 
 function RaceManagement() {
   const raceButtons = [
@@ -23,8 +24,8 @@ function RaceManagement() {
           <Button text={button.text} color="black" width={button.width} />
         </Link>
       ))}
+
+      <InputText></InputText>
     </PageContainer>
   );
 }
-
-export default RaceManagement;
