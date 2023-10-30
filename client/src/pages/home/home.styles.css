@@ -4,9 +4,6 @@
   justify-content: center;
   align-items: center;
   background-color: var(--color-quaternary);
-  min-height: calc(100vh - var(--header-mobile-height));
-  margin-bottom: var(--header-mobile-height);
-  gap: 1rem;
 }
 
 .page__title {
@@ -53,4 +50,21 @@
   justify-content: center;
   align-items: flex-end;
   gap: 3rem;
+}
+
+@media (max-width: 500px) {
+  .page__main {
+    background-color: var(--color-quaternary);
+    min-height: calc(100vh - var(--header-mobile-height));
+    margin-bottom: var(--header-mobile-height);
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 501px) {
+  .page__main {
+    min-height: calc(100vh - var(--header-tablet-height));
+    margin-top: var(--header-tablet-height);
+    gap: 1rem;
+  }
 }

@@ -1,11 +1,11 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { UserContext } from "../../App";
 import IconLink from "../iconLink/iconLink.component";
 
 import "./header.styles.css";
 import Logo from "../../assets/graphics/logo.png";
 import Menu from "../../assets/graphics/menu.svg";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 export default function Header() {
   const { user, setUser, visibleMenuMobile, setVisibleMenuMobile } =
@@ -21,6 +21,11 @@ export default function Header() {
     return navigate("/");
   }
 
+  const location = useLocation();
+  useEffect(() => {
+    console.log(location.pathname);
+  }, [location.pathname]);
+
   return (
     <header className="header">
       <nav className="header__nav">
@@ -32,7 +37,22 @@ export default function Header() {
           </li>
           <li className="header__nav-item">
             <Link className="header__links" to="/">
-              Home
+              home
+            </Link>
+          </li>
+          <li className="header__nav-item">
+            <Link className="header__links links-not-mobile" to="/members">
+              members
+            </Link>
+          </li>
+          <li className="header__nav-item">
+            <Link className="header__links links-not-mobile" to="/races">
+              races
+            </Link>
+          </li>
+          <li className="header__nav-item">
+            <Link className="header__links links-not-mobile" to="/results">
+              results
             </Link>
           </li>
           {user === "admin" ? (
