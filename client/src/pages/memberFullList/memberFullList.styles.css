@@ -1,0 +1,9 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+li {
+  font-family: var(--font-primary);
+  font-weight: 100;
+}

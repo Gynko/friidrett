@@ -12,14 +12,20 @@ export default function MembersManagement() {
           titleBottom="management"
         />
         <div className="page-container">
-          <Button text="New member" color="black" width="button-small" />
+          <main>
+            <Button text="New member" color="black" width="button-small" />
 
-          <Button text="Edit member" color="black" width="button-small" />
+            <Button text="Edit member" color="black" width="button-small" />
 
-          <Button text="Delete member" color="black" width="button-small" />
-          <Button text="Find race" color="black" width="button-large" />
+            <Button text="Delete member" color="black" width="button-small" />
+            <Button text="Find member" color="black" width="button-large" />
 
-          <Button text="Full race list" color="black" width="button-large" />
+            <Button
+              text="Full member list"
+              color="black"
+              width="button-large"
+            />
+          </main>
         </div>
       </PageContainer>
     </main>
