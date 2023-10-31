@@ -1,0 +1,11 @@
+/* Generelle input-styling */
+.input-text {
+    background-color: white;      
+    color: #333333;                 
+    border: 0.2rem solid var(--color-primary);                  
+    margin: 10px;           
+    padding: 10px;                 
+    width: 10rem;                  
+    font-size: 1rem;               
+}
+

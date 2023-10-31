@@ -4,7 +4,7 @@ import Button from "../../components/button/button.component";
 import "./race.page.css";
 import SectionTitle from "../../components/sectionTitle/sectionTitle.component";
 import PageContainer from "../../components/pageContainer/pageContainer.component";
-import InputText from "../../components/button/inputText.component";
+
 
 export default function RaceManagement() {
   const raceButtons = [
@@ -15,7 +15,9 @@ export default function RaceManagement() {
     { text: "Full race list", width: "button-large", path: "/race-list" },
   ];
 
+
   return (
+    <main>
     <PageContainer>
       <SectionTitle icon="races" titleTop="Races" titleBottom="management" />
 
@@ -24,8 +26,8 @@ export default function RaceManagement() {
           <Button text={button.text} color="black" width={button.width} />
         </Link>
       ))}
-
-      <InputText></InputText>
+    
     </PageContainer>
+    </main>
   );
 }
