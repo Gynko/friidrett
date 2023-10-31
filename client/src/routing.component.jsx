@@ -14,6 +14,8 @@ import RaceFullList from "./pages/race/raceFullList/raceFullList.page";
 import RaceNew from "./pages/race/raceNew/raceNew.page";
 import RaceManagement from "./pages/race/race.page";
 import ResultsManagement from "./pages/results/results.page";
+import ResultsNew from "./pages/results/resultsNew/resultsNew.page";
+import ResultsGetAll from "./pages/results/resultsGetAll/resultsGetAll.page";
 
 export default function Routing() {
   function BasicLayout() {
@@ -85,6 +87,14 @@ export default function Routing() {
         {
           path: "/results",
           element: <ResultsManagement />,
+        },
+        {
+          path: "/results/new",
+          element: <ResultsNew />,
+        },
+        {
+          path: "/results/getall",
+          element: <ResultsGetAll />,
         },
       ],
     },

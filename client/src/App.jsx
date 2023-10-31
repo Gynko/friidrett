@@ -8,10 +8,18 @@ export const UserContext = createContext();
 function App() {
   const [user, setUser] = useState("admin");
   const [visibleMenuMobile, setVisibleMenuMobile] = useState(false);
+  const [visibleModal, setVisibleModal] = useState(false);
 
   return (
     <UserContext.Provider
-      value={{ user, setUser, visibleMenuMobile, setVisibleMenuMobile }}
+      value={{
+        user,
+        setUser,
+        visibleMenuMobile,
+        setVisibleMenuMobile,
+        visibleModal,
+        setVisibleModal,
+      }}
     >
       <Routing />
     </UserContext.Provider>
