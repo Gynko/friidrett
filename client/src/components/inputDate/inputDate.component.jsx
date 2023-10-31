@@ -1,10 +1,19 @@
 import "./inputDate.styles.css";
 
-export default function inputDate() {
-  return
-/*   (
-  <div>
-    <h3></h3>
-    <input type="date" />
-  </div>); */
+const currentYear = new Date().getFullYear();
+const years = Array.from(new Array(120), (val, index) => currentYear - index);
+
+export default function InputDate() {
+  return (
+    <div>
+      <h3 className="h3-input">Birth year</h3>
+      <select name="year" id="year-select">
+        {years.map((year) => (
+          <option key={year} value={year}>
+            {year}
+          </option>
+        ))}
+      </select>
+    </div>
+  );
 }
