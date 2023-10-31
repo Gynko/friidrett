@@ -1,11 +1,11 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { UserContext } from "../../App";
 import IconLink from "../iconLink/iconLink.component";
 
 import "./header.styles.css";
 import Logo from "../../assets/graphics/logo.png";
 import Menu from "../../assets/graphics/menu.svg";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Header() {
   const { user, setUser, visibleMenuMobile, setVisibleMenuMobile } =
@@ -20,11 +20,6 @@ export default function Header() {
     setUser(undefined);
     return navigate("/");
   }
-
-  const location = useLocation();
-  useEffect(() => {
-    console.log(location.pathname);
-  }, [location.pathname]);
 
   return (
     <header className="header">

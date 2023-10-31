@@ -1,9 +1,27 @@
-import InputRadio from "../../components/inputRadio/inputRadio.component";
+import "./results.styles.css";
+import PageContainer from "../../components/pageContainer/pageContainer.component";
+import SectionTitle from "../../components/sectionTitle/sectionTitle.component";
+import Button from "../../components/button/button.component";
+import { Link } from "react-router-dom";
 
 export default function ResultsManagement() {
-  const radioList = [
-    { value: "M", label: "M", name: "gender" },
-    { value: "F", label: "F", name: "gender" },
-  ];
-  return <InputRadio list={radioList} label="Gender" />;
+  return (
+    <PageContainer>
+      <main className="main-container">
+        <SectionTitle
+          icon="results"
+          titleTop="Results"
+          titleBottom="management"
+        />
+        <div className="results-button-container">
+          <Link to="/results/new">
+            <Button color="black" text="Add result" />
+          </Link>
+          <Link to="/results/getall">
+            <Button color="black" text="Get all results" />
+          </Link>
+        </div>
+      </main>
+    </PageContainer>
+  );
 }
