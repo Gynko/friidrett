@@ -5,29 +5,26 @@ import "./race.page.css";
 import SectionTitle from "../../components/sectionTitle/sectionTitle.component";
 import PageContainer from "../../components/pageContainer/pageContainer.component";
 
-
 export default function RaceManagement() {
   const raceButtons = [
-    { text: "New race", width: "button-small", path: "/new-race" },
-    { text: "Edit race", width: "button-small", path: "/edit-race" },
-    { text: "Delete race", width: "button-small", path: "/delete-race" },
-    { text: "Find race", width: "button-large", path: "/find-race" },
-    { text: "Full race list", width: "button-large", path: "/race-list" },
+    { text: "New race", width: "small", path: "/races/new" },
+    { text: "Edit race", width: "small", path: "/races/edit" },
+    { text: "Delete race", width: "small", path: "/races/delete" },
+    { text: "Find race", width: "large", path: "/races/find" },
+    { text: "Full race list", width: "large", path: "/races/fulllist" },
   ];
 
-
   return (
-    <main>
     <PageContainer>
-      <SectionTitle icon="races" titleTop="Races" titleBottom="management" />
+      <main>
+        <SectionTitle icon="races" titleTop="Races" titleBottom="management" />
 
-      {raceButtons.map((button, index) => (
-        <Link key={index} to={button.path}>
-          <Button text={button.text} color="black" width={button.width} />
-        </Link>
-      ))}
-    
+        {raceButtons.map((button, index) => (
+          <Link key={index} to={button.path}>
+            <Button text={button.text} color="black" width={button.width} />
+          </Link>
+        ))}
+      </main>
     </PageContainer>
-    </main>
   );
 }
