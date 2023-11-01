@@ -57,7 +57,7 @@ export default function MemberEdit() {
       email,
     };
     fetch(`/members/${id}`, {
-      method: "PUT",
+      method: "PATCH",
       headers: {
         "Content-Type": "application/json",
       },
