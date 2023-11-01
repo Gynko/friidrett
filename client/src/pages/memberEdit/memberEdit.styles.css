@@ -9,6 +9,7 @@
 .member-edit-container {
   display: flex;
   flex-flow: row nowrap;
+  align-items: center;
 }
 
 .member-edit-name {
