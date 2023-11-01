@@ -2,6 +2,7 @@ import SectionTitle from "../../components/sectionTitle/sectionTitle.component";
 import PageContainer from "../../components/pageContainer/pageContainer.component";
 import Button from "../../components/button/button.component";
 import { Link } from "react-router-dom";
+import "./membersManagement.styles.css";
 
 export default function MembersManagement() {
   return (
@@ -12,7 +13,7 @@ export default function MembersManagement() {
           titleTop="Members"
           titleBottom="management"
         />
-        <div className="page-container">
+        <div className="member-management-links-container">
           <Link to="/members/new">
             <Button text="New member" color="black" width="button-small" />
           </Link>
@@ -23,10 +24,14 @@ export default function MembersManagement() {
             <Button text="Delete member" color="black" width="button-small" />
           </Link>
           <Link to="/members/find">
-            <Button text="Find race" color="black" width="button-large" />
+            <Button text="Find member" color="black" width="button-large" />
           </Link>
           <Link to="/members/fulllist">
-            <Button text="Full race list" color="black" width="button-large" />
+            <Button
+              text="Full member list"
+              color="black"
+              width="button-large"
+            />
           </Link>
         </div>
       </PageContainer>

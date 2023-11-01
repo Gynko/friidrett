@@ -59,6 +59,12 @@ export default function MemberNew() {
       })
       .then((data) => {
         console.log("Success:", data);
+        setFirstName("");
+        setLastName("");
+        setSelectedGender(null);
+        setBirthYear("");
+        setEmail("");
+        alert(`Member ${firstName} added successfully`);
       })
       .catch((error) => {
         console.error("Error:", error);
@@ -77,10 +83,12 @@ export default function MemberNew() {
         <form className="member-new-result-form" onSubmit={onFormSubmit}>
           <InputText
             placeholder="first name"
+            value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
           />
           <InputText
             placeholder="last name"
+            value={lastName}
             onChange={(e) => setLastName(e.target.value)}
           />
           <InputRadio
@@ -89,9 +97,13 @@ export default function MemberNew() {
             selectedValue={selectedGender}
             label="Choose gender"
           />
-          <InputDate onChange={(selectedYear) => setBirthYear(selectedYear)} />
+          <InputDate
+            value={birthYear}
+            onChange={(selectedYear) => setBirthYear(selectedYear)}
+          />
           <InputText
             placeholder="email"
+            value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <Button type="submit" color="yellow" text="Submit" width="large" />
