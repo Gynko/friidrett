@@ -12,3 +12,20 @@ gap: 1rem;
     align-items: center;
     justify-content: center;
   }
+
+  .race-edit-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+  }
+  
+  .race-edit-number{
+    width: 1.5rem;
+  }
+  .race-edit-date {
+    width: 6rem;
+  }
+  .race-edit-distance {
+    width: 6rem;
+  }
+  
