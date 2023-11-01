@@ -8,19 +8,21 @@ import Button from "../../../components/button/button.component";
 
 export default function RaceEdit() {
   const [races, setRaces] = useState([]);
-  const [raceId, setRaceId] = React.useState("");
   const [raceDate, setRaceDate] = useState("");
   const [distance, setDistance] = useState("");
   const [raceNr, setRaceNr] = useState("");
 
   useEffect(() => {
     fetch("/races")
-      .then((res) => res.json())
-      .then((data) => setRaces(data));
-  }, []);
+        .then((res) => res.json())
+        .then((data) => {
+            setRaces(data);
+            console.log(data);  // Legg til denne linjen
+        });
+}, []);
 
   const handleEditClick = (race) => {
-    setRaceId(race.id);
+    console.log("Editing race with ID:", race.raceNr); 
     setRaceNr(race.raceNr);
     setRaceDate(race.raceDate);
     setDistance(race.distance.toString());
@@ -34,7 +36,7 @@ export default function RaceEdit() {
       distance: parseInt(distance),
     };
 
-    fetch(`races/${raceId}`, {
+    fetch(`/races/${raceNr}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -70,18 +72,19 @@ export default function RaceEdit() {
         <Heading text="Edit race" />
 
         {races.map((race) => (
-          <div className="race-edit-container" key={race.id}>
-               <p className="race-edit-name">{race.raceNr}</p>
-            <p className="race-edit-name">{formatDate(race.raceDate)}</p>
-            <p className="race-edit-name">{race.distance} m</p>
+          <div className="race-edit-container" key={race.raceNr}>
+               <p className="race-edit-number">{race.raceNr}</p>
+            <p className="race-edit-date">{formatDate(race.raceDate)}</p>
+            <p className="race-edit-distance">{race.distance} m</p>
             <Button
               color="yellow"
               text="Edit"
               onClick={() => handleEditClick(race)}
+             
             />
           </div>
         ))}
-        {raceId && (
+        {raceNr && (
           <form onSubmit={onFormSubmit} className="race-edit-form">
             <InputText
               type="date"
@@ -96,7 +99,7 @@ export default function RaceEdit() {
               onChange={(e) => setDistance(e.target.value)}
             />
 
-            <Button type="submit" text="Update race" />
+            <Button className="race-edit-button" type="submit" text="Update race" />
           </form>
         )}
       </main>

@@ -25,15 +25,14 @@ export default function NewRace() {
     
     console.log("Sending the following data to the server:", formData);
 
-    fetch('races', {
+    fetch('/races', {
       method: "POST",
       headers: {
-        headers: {
-          "Content-Type": "application/json",
-        },
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(formData)
     })
+
 .then((response) => {
   if(!response.ok) {
     console.error(`HTTP error! Status: ${response.status}`);

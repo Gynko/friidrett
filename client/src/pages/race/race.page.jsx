@@ -15,7 +15,7 @@ export default function RaceManagement() {
 
   return (
     <PageContainer>
-      <main>
+      <main className="race-new-main">
         <SectionTitle icon="races" titleTop="Races" titleBottom="management" />
 
         {raceButtons.map((button, index) => (
