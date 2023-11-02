@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import React, { useState } from "react";
 import Button from "../../../components/button/button.component";
 import SectionTitle from "../../../components/sectionTitle/sectionTitle.component";
 import PageContainer from "../../../components/pageContainer/pageContainer.component";
@@ -47,12 +48,35 @@ export default function NewRace() {
     console.log("Sending the following data to the server:", fullData);
 
     fetch("/races", {
+    fetch("/races", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(fullData),
     })
+      .then((response) => {
+        if (!response.ok) {
+          console.error(`HTTP error! Status: ${response.status}`);
+          throw new Error("Network response was not ok");
+        }
+        return response.text();
+      })
+      .then((text) => {
+        try {
+          return JSON.parse(text);
+        } catch (err) {
+          console.error("Failed to parse as JSON:", text);
+          throw err;
+        }
+      })
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
       .then((response) => {
         if (!response.ok) {
           console.error(`HTTP error! Status: ${response.status}`);

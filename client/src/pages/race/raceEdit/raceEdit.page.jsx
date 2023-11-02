@@ -14,12 +14,12 @@ export default function RaceEdit() {
 
   useEffect(() => {
     fetch("/races")
-        .then((res) => res.json())
-        .then((data) => {
-            setRaces(data);
-            console.log(data);  // Legg til denne linjen
-        });
-}, []);
+      .then((res) => res.json())
+      .then((data) => {
+        setRaces(data);
+        console.log(data); // Legg til denne linjen
+      });
+  }, []);
 
   const handleEditClick = (race) => {
     setRaceNr(race.raceNr);
@@ -87,8 +87,7 @@ export default function RaceEdit() {
             <Button
               color="yellow"
               text="Edit"
-              onClick={() => handleEditClick(race)}
-             
+              onClick={() => alert("Function not supported by the server")}
             />
           </div>
       

@@ -10,7 +10,6 @@ import "./memberEdit.styles.css";
 
 export default function MemberEdit() {
   const [members, setMembers] = useState([]);
-
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [selectedGender, setSelectedGender] = useState(null);
@@ -24,7 +23,7 @@ export default function MemberEdit() {
       .then((data) => setMembers(data));
   }, []);
 
-  function editMember(id) {
+  function fetchAndPopulateFields(id) {
     fetch(`/members/${id}`, {
       method: "GET",
     })
@@ -102,10 +101,7 @@ export default function MemberEdit() {
               <Button
                 color="yellow"
                 text="Edit"
-                onClick={() => {
-                  console.log("editing");
-                  editMember(member.memberNumber);
-                }}
+                onClick={() => alert("Function not supported by the server")}
               />
             </div>
           );
