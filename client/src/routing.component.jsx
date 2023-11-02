@@ -1,4 +1,11 @@
-import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "./App";
+import {
+  Outlet,
+  RouterProvider,
+  createBrowserRouter,
+  Navigate,
+} from "react-router-dom";
 import Home from "./pages/home/home.page";
 import MembersManagement from "./pages/membersManagement/membersManagement.page";
 import Header from "./components/header/header.component";
@@ -16,6 +23,15 @@ import RaceManagement from "./pages/race/race.page";
 import ResultsManagement from "./pages/results/results.page";
 import ResultsNew from "./pages/results/resultsNew/resultsNew.page";
 import ResultsGetAll from "./pages/results/resultsGetAll/resultsGetAll.page";
+
+function ProtectedRoute({ children, ...rest }) {
+  const { user } = useContext(UserContext);
+
+  if (user === "admin") {
+    return children;
+  }
+  return <Navigate to="/" replace />;
+}
 
 export default function Routing() {
   function BasicLayout() {
@@ -38,63 +54,123 @@ export default function Routing() {
         },
         {
           path: "/races",
-          element: <RaceManagement />,
+          element: (
+            <ProtectedRoute>
+              <RaceManagement />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/members",
-          element: <MembersManagement />,
+          element: (
+            <ProtectedRoute>
+              <MembersManagement />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/members/delete",
-          element: <MemberDelete />,
+          element: (
+            <ProtectedRoute>
+              <MemberDelete />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/members/edit",
-          element: <MemberEdit />,
+          element: (
+            <ProtectedRoute>
+              <MemberEdit />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/members/find",
-          element: <MemberFind />,
+          element: (
+            <ProtectedRoute>
+              <MemberFind />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/members/fulllist",
-          element: <MemberFullList />,
+          element: (
+            <ProtectedRoute>
+              <MemberFullList />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/members/new",
-          element: <MemberNew />,
+          element: (
+            <ProtectedRoute>
+              <MemberNew />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/races/delete",
-          element: <RaceDelete />,
+          element: (
+            <ProtectedRoute>
+              <RaceDelete />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/races/edit",
-          element: <RaceEdit />,
+          element: (
+            <ProtectedRoute>
+              <RaceEdit />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/races/find",
-          element: <RaceFind />,
+          element: (
+            <ProtectedRoute>
+              <RaceFind />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/races/fulllist",
-          element: <RaceFullList />,
+          element: (
+            <ProtectedRoute>
+              <RaceFullList />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/races/new",
-          element: <RaceNew />,
+          element: (
+            <ProtectedRoute>
+              <RaceNew />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/results",
-          element: <ResultsManagement />,
+          element: (
+            <ProtectedRoute>
+              <ResultsManagement />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/results/new",
-          element: <ResultsNew />,
+          element: (
+            <ProtectedRoute>
+              <ResultsNew />
+            </ProtectedRoute>
+          ),
         },
         {
           path: "/results/getall",
-          element: <ResultsGetAll />,
+          element: (
+            <ProtectedRoute>
+              <ResultsGetAll />
+            </ProtectedRoute>
+          ),
         },
       ],
     },

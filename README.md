@@ -17,6 +17,8 @@ Team members:
   - [3.2. Atomic design](#32-atomic-design)
   - [3.3. The App component](#33-the-app-component)
   - [3.4. The Routing component](#34-the-routing-component)
+    - [3.4.1. Layout](#341-layout)
+    - [3.4.2. Protected routes](#342-protected-routes)
   - [3.5. Global CSS](#35-global-css)
     - [3.5.1. CSS rem units](#351-css-rem-units)
 
@@ -118,7 +120,57 @@ We decided on having the App component to be responsible for:
 
 ## 3.4. The Routing component
 
-TODO
+### 3.4.1. Layout
+
+Since we wanted to have the header on all components, we used a technique allowing to inject everywhere.
+
+First we create a basic layout as a function returning the components we need. <Outlet> is a special component that needs to be imported from react-router-dom. It will be replaced by the component that is rendered by the router, for example the home page or the members page.
+
+```js
+import {
+  Outlet,
+  RouterProvider,
+  createBrowserRouter,
+  Navigate,
+} from "react-router-dom";
+
+function BasicLayout() {
+  return (
+    <>
+      <Header />
+      <Outlet />
+    </>
+  );
+}
+```
+
+### 3.4.2. Protected routes
+
+Since we don't want to expose our routes to all users, only admin, we created a special component:
+
+```js
+function ProtectedRoute({ children, ...rest }) {
+  const { user } = useContext(UserContext);
+
+  if (user === "admin") {
+    return children;
+  }
+  return <Navigate to="/" replace />;
+}
+```
+
+This component wraps all the routes that should be protected, and checks if the user is admin. If not, it redirects to the home page.
+
+```js
+        {
+          path: "/races",
+          element: (
+            <ProtectedRoute>
+              <RaceManagement />
+            </ProtectedRoute>
+          ),
+        },
+```
 
 ## 3.5. Global CSS
 
