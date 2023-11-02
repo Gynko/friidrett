@@ -71,7 +71,6 @@ export default function MemberEdit() {
     })
       .then((response) => {
         if (!response.ok) {
-          console.error(`HTTP error! Status: ${response.status}`);
           throw new Error("Network response was not ok");
         }
         return response.text();
@@ -80,15 +79,11 @@ export default function MemberEdit() {
         try {
           return JSON.parse(text);
         } catch (err) {
-          console.error("Failed to parse as JSON:", text);
           throw err;
         }
       })
-      .then((data) => {
-        console.log("Success:", data);
-      })
+      .then((data) => {})
       .catch((error) => {
-        console.error("Error:", error);
         alert("Unsupported by the server");
       });
   }

@@ -25,7 +25,6 @@ export default function RaceDelete() {
         fetchRace();
       })
       .catch((err) => {
-        console.error(err);
       });
   }
 
