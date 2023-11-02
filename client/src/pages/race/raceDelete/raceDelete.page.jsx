@@ -55,7 +55,7 @@ export default function RaceDelete() {
                   color="yellow"
                   text="Delete"
                   onClick={() => {
-                    deleteRace(race.raceNumber);
+                    deleteRace(race.raceNr);
                   }}
                 />
               </div>
