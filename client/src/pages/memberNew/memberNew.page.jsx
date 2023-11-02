@@ -33,8 +33,7 @@ export default function MemberNew() {
       birthYear: parseInt(birthYear),
       email,
     };
-    console.log("formdata", formData);
-    // Send POST request to the server
+
     fetch(`/members`, {
       method: "POST",
       headers: {
@@ -44,7 +43,6 @@ export default function MemberNew() {
     })
       .then((response) => {
         if (!response.ok) {
-          console.error(`HTTP error! Status: ${response.status}`);
           throw new Error("Network response was not ok");
         }
         return response.text();
@@ -53,12 +51,10 @@ export default function MemberNew() {
         try {
           return JSON.parse(text);
         } catch (err) {
-          console.error("Failed to parse as JSON:", text);
           throw err;
         }
       })
       .then((data) => {
-        console.log("Success:", data);
         setFirstName("");
         setLastName("");
         setSelectedGender(null);
@@ -67,7 +63,7 @@ export default function MemberNew() {
         alert(`Member ${firstName} added successfully`);
       })
       .catch((error) => {
-        console.error("Error:", error);
+        alert("Something went wrong. Please try again")
       });
   }
 

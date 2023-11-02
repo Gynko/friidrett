@@ -16,7 +16,6 @@ export default function MemberFullList() {
         return response.json();
       })
       .then((fetchedData) => {
-        console.log(fetchedData); 
         setMembers(fetchedData);
       });
   }, []);
