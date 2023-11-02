@@ -87,7 +87,7 @@ export default function RaceEdit() {
             <Button
               color="yellow"
               text="Edit"
-              onClick={() => alert("Function not supported by the server")}
+              onClick={() => handleEditClick(race)}
             />
           </div>
       
