@@ -15,22 +15,22 @@ export default function MembersManagement() {
         />
         <div className="member-management-links-container">
           <Link to="/members/new">
-            <Button text="New member" color="black" width="button-small" />
+            <Button text="New member" color="black" width="small" />
           </Link>
           <Link to="/members/edit">
-            <Button text="Edit member" color="black" width="button-small" />
+            <Button text="Edit member" color="black" width="small" />
           </Link>
           <Link to="/members/delete">
-            <Button text="Delete member" color="black" width="button-small" />
+            <Button text="Delete member" color="black" width="small" />
           </Link>
           <Link to="/members/find">
-            <Button text="Find member" color="black" width="button-large" />
+            <Button text="Find member" color="black" width="large" />
           </Link>
           <Link to="/members/fulllist">
             <Button
               text="Full member list"
               color="black"
-              width="button-large"
+              width="large"
             />
           </Link>
         </div>

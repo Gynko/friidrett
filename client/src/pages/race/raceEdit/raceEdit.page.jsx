@@ -22,7 +22,6 @@ export default function RaceEdit() {
   }, []);
 
   const handleEditClick = (race) => {
-    console.log("Editing race with ID:", race.raceNr);
     setRaceNr(race.raceNr);
     setRaceDate(race.raceDate);
     setDistance(race.distance.toString());
@@ -43,7 +42,13 @@ export default function RaceEdit() {
       },
       body: JSON.stringify(formData),
     })
-      .then((response) => response.json())
+      .then((response) => {
+        if (response.status === 405) {
+          throw new Error ("Function not supported by the server")
+        }
+        return response.json();
+      })
+
       .then((data) => {
         console.log("Race updated:", data);
         return fetch("/races");
@@ -53,13 +58,16 @@ export default function RaceEdit() {
         setRaces(data);
       })
       .catch((error) => {
+        if (error.message === "Function not supported by the server"){
+          alert(error.message);
+        }
         console.error("Error:", error);
       });
   }
   const formatDate = (isoDate) => {
     const date = new Date(isoDate);
     const year = date.getFullYear();
-    const month = String(date.getMonth() + 1).padStart(2, "0"); // months are 0-indexed
+    const month = String(date.getMonth() + 1).padStart(2, "0"); 
     const day = String(date.getDate()).padStart(2, "0");
 
     return `${year}-${month}-${day}`;
@@ -73,24 +81,25 @@ export default function RaceEdit() {
 
         {races.map((race) => (
           <div className="race-edit-container" key={race.raceNr}>
-            <p className="race-edit-number">{race.raceNr}</p>
+              <div className="race-info"> <p className="race-edit-number">{race.raceNr}</p>
             <p className="race-edit-date">{formatDate(race.raceDate)}</p>
             <p className="race-edit-distance">{race.distance} m</p>
             <Button
               color="yellow"
               text="Edit"
-              onClick={() => alert("Function not supported by the server")}
+              onClick={() => handleEditClick(race)}
             />
           </div>
-        ))}
-        {raceNr && (
+      
+        {raceNr === race.raceNr && (
           <form onSubmit={onFormSubmit} className="race-edit-form">
+            <p>Date</p>
             <InputText
               type="date"
               value={raceDate}
-              placeholder="Race date"
               onChange={(e) => setRaceDate(e.target.value)}
             />
+                  <p>Distance</p>
             <InputText
               type="number"
               value={distance}
@@ -98,13 +107,11 @@ export default function RaceEdit() {
               onChange={(e) => setDistance(e.target.value)}
             />
 
-            <Button
-              className="race-edit-button"
-              type="submit"
-              text="Update race"
-            />
+            <Button className="race-edit-button" type="submit" color="yellow" text="Update race" />
           </form>
         )}
+        </div>
+        ))}
       </main>
     </PageContainer>
   );

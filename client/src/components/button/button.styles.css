@@ -3,6 +3,7 @@
   margin: 10px;
   background-color: black;
   color: white;
+  font-family: var(--font-secondary);  
   padding: 10px 20px;
   border-radius: 5px;
   border: none;
@@ -16,6 +17,7 @@
   font-size: 1rem;    
   background-color: var(--color-secondary);
   color: var(--color-tertiary);
+  font-family: var(--font-primary);  
   padding: 10px 20px;
   border-radius: 5px;
   border: 0.2rem solid var(--color-primary);   
@@ -29,6 +31,7 @@
   font-size: 1rem;    
   background-color: var(--color-quinary);
   color: var(--color-tertiary);
+  font-family: var(--font-primary);  
   padding: 10px 20px;
   border-radius: 5px;
   border: 0.2rem solid var(--color-quinary);   

@@ -1,7 +1,8 @@
 .input-date-picker {
     background-color: var(--color-quaternary);      
     color: var(--color-tertiary);                 
-    border: 0.2rem solid var(--color-primary);                  
+    border: 0.2rem solid var(--color-primary);    
+    font-family: var(--font-primary);              
     margin: 0.5rem;           
     padding: 0.5rem;                
     width: 10rem;                  
