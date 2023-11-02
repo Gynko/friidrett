@@ -21,7 +21,7 @@ export default function NewRace() {
     console.log(memberName);
     if (selectedMembers.includes(memberName)) {
       setSelectedMembers((prevMembers) =>
-        prevMembers.filter(name => name !== memberName)
+        prevMembers.filter((name) => name !== memberName)
       );
     } else {
       setSelectedMembers((prevMembers) => [...prevMembers, memberName]);
@@ -44,8 +44,7 @@ export default function NewRace() {
       members: selectedMembers,
     };
 
-    console.log('Sending data:', fullData);
-
+    console.log("Sending data:", fullData);
 
     fetch("/races", {
       method: "POST",
@@ -61,12 +60,13 @@ export default function NewRace() {
         }
         return response.json();
       })
-   
+
       .then((data) => {
         console.log("Success:", data);
       })
       .catch((error) => {
         console.error("Error:", error);
+        alert("Unsupported by the server");
       });
   };
 
@@ -103,19 +103,23 @@ export default function NewRace() {
                 {members.map((member) => {
                   const memberName = `${member.firstName} ${member.lastName}`;
                   return (
-                  <li key={memberName}>
-                    <input
-                      type="checkbox"
-                      value={memberName}
-                      checked={selectedMembers.includes(memberName)}
-                      onChange={() => handleMembers(memberName)}
-                    />
-                    {`${member.firstName} ${member.lastName} ${member.birthYear}`}
-                  </li>
+                    <li key={memberName}>
+                      <input
+                        type="checkbox"
+                        value={memberName}
+                        checked={selectedMembers.includes(memberName)}
+                        onChange={() => handleMembers(memberName)}
+                      />
+                      {`${member.firstName} ${member.lastName} ${member.birthYear}`}
+                    </li>
                   );
-                  })}
+                })}
               </ul>
-              <Button text="Done" color="black" onClick={() => setShowMembersList(false)} />
+              <Button
+                text="Done"
+                color="black"
+                onClick={() => setShowMembersList(false)}
+              />
             </div>
           )}
           <Button
