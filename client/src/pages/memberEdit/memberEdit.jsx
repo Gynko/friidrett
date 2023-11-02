@@ -19,7 +19,10 @@ export default function MemberEdit() {
 
   useEffect(() => {
     fetch("/members")
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch members.");
+        return res.json();
+      })
       .then((data) => setMembers(data));
   }, []);
 
@@ -27,7 +30,10 @@ export default function MemberEdit() {
     fetch(`/members/${id}`, {
       method: "GET",
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch member details.");
+        return res.json();
+      })
       .then((data) => {
         setFirstName(data.firstName);
         setLastName(data.lastName);
@@ -37,6 +43,7 @@ export default function MemberEdit() {
         setId(data.memberNumber);
       });
   }
+
   const handleGenderChange = (value) => {
     setSelectedGender(value);
   };
@@ -82,6 +89,7 @@ export default function MemberEdit() {
       })
       .catch((error) => {
         console.error("Error:", error);
+        alert("Unsupported by the server");
       });
   }
   return (
@@ -101,7 +109,7 @@ export default function MemberEdit() {
               <Button
                 color="yellow"
                 text="Edit"
-                onClick={() => alert("Function not supported by the server")}
+                onClick={() => fetchAndPopulateFields(member.memberNumber)}
               />
             </div>
           );
