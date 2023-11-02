@@ -1,7 +1,8 @@
 
 .input-text {
     background-color: white;      
-    color: var(--color-tertiary);                 
+    color: var(--color-tertiary);   
+    font-family: var(--font-primary);                
     border: 0.2rem solid var(--color-primary);                 
     margin: 0.5rem;           
     padding: 0.5rem;                 
