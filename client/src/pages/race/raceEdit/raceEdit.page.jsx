@@ -14,15 +14,15 @@ export default function RaceEdit() {
 
   useEffect(() => {
     fetch("/races")
-        .then((res) => res.json())
-        .then((data) => {
-            setRaces(data);
-            console.log(data);  // Legg til denne linjen
-        });
-}, []);
+      .then((res) => res.json())
+      .then((data) => {
+        setRaces(data);
+        console.log(data); // Legg til denne linjen
+      });
+  }, []);
 
   const handleEditClick = (race) => {
-    console.log("Editing race with ID:", race.raceNr); 
+    console.log("Editing race with ID:", race.raceNr);
     setRaceNr(race.raceNr);
     setRaceDate(race.raceDate);
     setDistance(race.distance.toString());
@@ -73,14 +73,13 @@ export default function RaceEdit() {
 
         {races.map((race) => (
           <div className="race-edit-container" key={race.raceNr}>
-               <p className="race-edit-number">{race.raceNr}</p>
+            <p className="race-edit-number">{race.raceNr}</p>
             <p className="race-edit-date">{formatDate(race.raceDate)}</p>
             <p className="race-edit-distance">{race.distance} m</p>
             <Button
               color="yellow"
               text="Edit"
-              onClick={() => handleEditClick(race)}
-             
+              onClick={() => alert("Function not supported by the server")}
             />
           </div>
         ))}
@@ -99,7 +98,11 @@ export default function RaceEdit() {
               onChange={(e) => setDistance(e.target.value)}
             />
 
-            <Button className="race-edit-button" type="submit" text="Update race" />
+            <Button
+              className="race-edit-button"
+              type="submit"
+              text="Update race"
+            />
           </form>
         )}
       </main>

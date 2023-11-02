@@ -39,7 +39,7 @@ export default function MemberDelete() {
           titleTop="Members"
           titleBottom="management"
         />
-        <Heading text="Edit member" />
+        <Heading text="Delete member" />
         {members.map((member, index) => {
           return (
             <div className="member-edit-container" key={index}>

@@ -101,6 +101,11 @@ export default function MemberNew() {
             value={birthYear}
             onChange={(selectedYear) => setBirthYear(selectedYear)}
           />
+          <Button
+            text="Add race"
+            color="red"
+            onClick={() => alert("Function not supported by the server")}
+          />
           <InputText
             placeholder="email"
             value={email}
