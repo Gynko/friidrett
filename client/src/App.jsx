@@ -6,7 +6,7 @@ import Routing from "./routing.component";
 export const UserContext = createContext();
 
 function App() {
-  const [user, setUser] = useState("admin");
+  const [user, setUser] = useState("");
   const [visibleMenuMobile, setVisibleMenuMobile] = useState(false);
   const [visibleModal, setVisibleModal] = useState(false);
 
