@@ -124,7 +124,7 @@ We decided on having the App component to be responsible for:
 
 Since we wanted to have the header on all components, we used a technique allowing to inject everywhere.
 
-First we create a basic layout as a function returning the components we need. <Outlet> is a special component that needs to be imported from react-router-dom. It will be replaced by the component that is rendered by the router, for example the home page or the members page.
+First we create a basic layout as a function returning the components we need. Outlet is a special component that needs to be imported from react-router-dom. It will be replaced by the component that is rendered by the router, for example the home page or the members page.
 
 ```js
 import {

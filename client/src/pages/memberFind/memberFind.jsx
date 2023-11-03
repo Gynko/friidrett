@@ -29,7 +29,7 @@ export default function MemberFind() {
       );
       setUserdata(filteredData);
     } else {
-      console.error(`HTTP error! Status: ${response.status}`);
+      throw new Error (`HTTP error! Status: ${response.status}`);
     }
   };
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Button from "../../../components/button/button.component";
 import SectionTitle from "../../../components/sectionTitle/sectionTitle.component";
 import PageContainer from "../../../components/pageContainer/pageContainer.component";
@@ -6,7 +6,6 @@ import InputText from "../../../components/inputText/inputText.component";
 import Heading from "../../../components/heading/heading.component";
 import InputDatePicker from "../../../components/inputDatePicker/inputDatePicker.component";
 import "./raceNew.styles.css";
-import { useMembers } from "../../../components/useMembers/useMembers.hook";
 
 export default function NewRace() {
   const [formData, setFormData] = useState({
@@ -15,7 +14,24 @@ export default function NewRace() {
   });
   const [selectedMembers, setSelectedMembers] = useState([]);
   const [showMembersList, setShowMembersList] = useState(false);
-  const members = useMembers();
+  const [members, setMembers] = useState ([]);
+
+  useEffect(() => {
+    fetch("/members")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((fetchedData) => {
+        setMembers(fetchedData);
+      })
+      .catch((error) => {
+        console.error("Fetching members failed:", error);
+      });
+  }, []);
+
 
   const handleMembers = (memberName) => {
     console.log(memberName);
